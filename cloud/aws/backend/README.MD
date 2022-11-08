@@ -18,6 +18,7 @@ Add bakend S3
 
 Uncomment
 
+```
 backend "s3" {
 
   bucket                    = "${var.name}-tf-remote-state-all-${var.aws_region}}"
@@ -27,6 +28,7 @@ backend "s3" {
   encrypt                   = true 
 
 }
+```
 
 terraform init
 

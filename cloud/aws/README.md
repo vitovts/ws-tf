@@ -31,8 +31,8 @@ Sets up the following AWS infrastructure:
 4. Set the following environment variables, init Terraform, create the infrastructure:
 
     ```sh
-    $ git clone git clone ssh://...
-    $ cd dp-repo-tf
+    $ git clone git clone -b main ssh://...
+    $ cd xx-repo-tf
     $ export AWS_ACCESS_KEY_ID="YOUR_AWS_ACCESS_KEY_ID"
     $ export AWS_SECRET_ACCESS_KEY="YOUR_AWS_SECRET_ACCESS_KEY"
 

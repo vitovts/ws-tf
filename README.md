@@ -33,6 +33,21 @@ terraform -version
 	}
 	```
 
+### Environment Variables
+``` code
+$ export AWS_ACCESS_KEY_ID="anaccesskey"
+$ export AWS_SECRET_ACCESS_KEY="asecretkey"
+$ export AWS_DEFAULT_REGION="us-west-2"
+```
+
+### Shared Credentials file
+```code
+provider "aws" {
+  region                  = "us-east-1"
+  shared_credentials_file = "/home/xx/.aws/credentials"
+}
+```
+
 ## Terraform init
 - The terraform init command is used to initialize a working directory containing Terraform configuration files. 
 - This is the first command that should be run after writing a new Terraform configuration. 
@@ -68,14 +83,17 @@ commands will detect it and remind you to do so if necessary.
 ## Execution Plan
 
 terraform plan shows what changes Terraform will apply to our infrastructure given the current state of our infrastructure as well as the current contents of our configuration.
-
 	
-	``` code
-	terraform plan \
-  	-var 'access_key=A..z' \
-  	-var 'secret_key=A..z'
-
-	```
+``` code
+$ terraform plan \
+  -var 'access_key=A..z' \
+  -var 'secret_key=A..z'
+```
+```code
+$ terraform plan \
+  -var-file="secret.tfvars" \
+  -var-file="production.tfvars"
+```
 
 ## Apply
 - he plan looks good, our configuration appears valid, so it's time to create real resources

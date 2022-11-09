@@ -69,12 +69,13 @@ commands will detect it and remind you to do so if necessary.
 
 terraform plan shows what changes Terraform will apply to our infrastructure given the current state of our infrastructure as well as the current contents of our configuration.
 
-	```
+	
+``` code
 	terraform plan \
   	-var 'access_key=A..z' \
   	-var 'secret_key=A..z'
 
-	```
+```
 
 ## Apply
 - he plan looks good, our configuration appears valid, so it's time to create real resources

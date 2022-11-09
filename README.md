@@ -16,11 +16,15 @@ terraform -version
  - The set of files used to describe infrastructure in Terraform is simply known as a code 
  - The recommended format of the configuration files JSON 
  - Terraform will automatically search for saved API credentials in ~/.aws/credentials or IAM instance profile credentials:
-	``` 
+	
+	``` code
+	[default]
   aws_access_key_id = A..z
   aws_secret_access_key = A..z
 	```
+
 - The provider block is used to configure the named provider, in our case "aws"
+	
 	```
 	provider "aws" {
   	region     = "us-east-1"
@@ -28,6 +32,7 @@ terraform -version
   	secret_key = "A..z"
 	}
 	```
+
 ## Terraform init
 - The terraform init command is used to initialize a working directory containing Terraform configuration files. 
 - This is the first command that should be run after writing a new Terraform configuration. 

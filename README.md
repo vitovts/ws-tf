@@ -96,10 +96,13 @@ $ terraform plan \
 ```
 
 ## Apply
-- he plan looks good, our configuration appears valid, so it's time to create real resources
+- He plan looks good, our configuration appears valid, so it's time to create real resources
 - Terraform also puts some state into the terraform.tfstate file by default.
 
 ## terraform show
 ## terraform validate
+## terraform output xx
+## terraform refresh
+
 
 

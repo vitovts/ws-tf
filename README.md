@@ -19,8 +19,8 @@ terraform -version
 	
 	``` code
 	[default]
-  aws_access_key_id = A..z
-  aws_secret_access_key = A..z
+  	aws_access_key_id = A..z
+  	aws_secret_access_key = A..z
 	```
 
 - The provider block is used to configure the named provider, in our case "aws"

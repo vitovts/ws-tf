@@ -10,7 +10,6 @@ While configuration management tools such as Chef, Puppet, and Ansible install a
 
 ## Install Terraform [here](https://www.terraform.io/downloads.html)
 
-terraform -version
 
 ## Terraform configuration
  - The set of files used to describe infrastructure in Terraform is simply known as a code 
@@ -99,6 +98,7 @@ $ terraform plan \
 - He plan looks good, our configuration appears valid, so it's time to create real resources
 - Terraform also puts some state into the terraform.tfstate file by default.
 
+## terraform apply -refresh-only
 ## terraform show
 ## terraform validate
 ## terraform output xx
@@ -106,3 +106,15 @@ $ terraform plan \
 
 
 
+ ```sh
+  $ git clone git clone ssh://../../repos/xx-repo-tf
+  $ cd xx-repo-tf/../
+  $ export AWS_ACCESS_KEY_ID="YOUR_AWS_ACCESS_KEY_ID"
+  $ export AWS_SECRET_ACCESS_KEY="YOUR_AWS_SECRET_ACCESS_KEY"
+
+  $ terraform init
+  $ terraform validate
+  $ terraform plan
+  $ terraform apply
+  $ cd ..
+```

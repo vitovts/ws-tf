@@ -27,9 +27,9 @@ terraform -version
 	
 	```
 	provider "aws" {
-  	region     = "us-east-1"
-  	access_key = "A..z"
-  	secret_key = "A..z"
+  	access_key = "${var.access_key}"
+  	secret_key = "${var.secret_key}"
+  	region     = "${var.region}"
 	}
 	```
 
@@ -70,10 +70,8 @@ commands will detect it and remind you to do so if necessary.
 terraform plan shows what changes Terraform will apply to our infrastructure given the current state of our infrastructure as well as the current contents of our configuration.
 
 ## Apply
-he plan looks good, our configuration appears valid, so it's time to create real resources
-
+- he plan looks good, our configuration appears valid, so it's time to create real resources
 - Terraform also puts some state into the terraform.tfstate file by default.
-
 
 ## terraform show
 ## terraform validate
